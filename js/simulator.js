@@ -1,7 +1,7 @@
 // Create canvas
 const canvas = document.querySelector(".myCanvas");
 const width = canvas.width = window.innerWidth;
-const height = canvas.height = Math.max(window.innerHeight, 800);
+const height = canvas.height = Math.max(window.innerHeight, 920);
 const ctx = canvas.getContext("2d");
 ctx.translate(width/2, height/2);
 
@@ -58,8 +58,7 @@ class Node {
 
 
 // Generate Nodes
-
-var number_of_nodes = 500; // make changeable later
+var number_of_nodes = 500; // changes with slider
 var max_radius = 0.4*height;
 var node_radius = 5;
 var chance_of_infection = 0.05;
@@ -80,6 +79,16 @@ function clear() {
     ctx. translate(width/2, height/2);
 }
 
+function drawCanvas() {
+    for (let node of nodes) {
+        node.draw();
+    }
+    ctx.beginPath();
+    ctx.lineWidth = 3;
+    ctx.arc(0, 0, max_radius+7, 0, 2*Math.PI);
+    ctx.stroke();
+}
+
 function reset() {
     clear();
 
@@ -93,9 +102,7 @@ function reset() {
         nodes[i] = new Node(x, y, i==0);
     }
     
-    for (let node of nodes) {
-        node.draw();
-    }
+    drawCanvas();
 }
 
 // returns true if all infected, false if not
@@ -107,10 +114,8 @@ function check_all_infected() {
 }
 
 function simulate() {
-    for (let node of nodes) {
-        node.draw();
-    }
-
+    drawCanvas();
+    
     if (!check_all_infected()) {
         if (cnt==0) {
             for (let node of nodes) {
