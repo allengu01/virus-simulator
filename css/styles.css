@@ -24,6 +24,10 @@ body {
     margin: 0;
 }
 
+.row {
+    min-height: 480px;
+}
+
 .remove-all-margins {
     margin: 0 !important;
     max-width: 100% !important;
@@ -40,6 +44,7 @@ body {
 #canvas-column {
     padding: 0;
 }
+
 canvas {
     width: 100%;
     height: auto;

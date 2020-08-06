@@ -1,7 +1,8 @@
 // Create canvas
 const canvas = document.querySelector(".myCanvas");
-const width = canvas.width = window.innerWidth;
-const height = canvas.height = Math.max(window.innerHeight, 920);
+const sim_area = document.getElementById("sim-area")
+const width = canvas.width = sim_area.getBoundingClientRect().width;
+const height = canvas.height = sim_area.getBoundingClientRect().height;
 const ctx = canvas.getContext("2d");
 ctx.translate(width/2, height/2);
 
@@ -60,7 +61,7 @@ class Node {
 // Generate Nodes
 var number_of_nodes = 500; // changes with slider
 var max_radius = 0.4*height;
-var node_radius = 5;
+var node_radius = 3;
 var chance_of_infection = 0.05;
 var max_dist_of_infection = 50;
 
