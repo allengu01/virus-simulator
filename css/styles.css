@@ -1,0 +1,70 @@
+/** NAVIGATION BAR **/
+h1 {
+    font-size: 30px;
+    padding-top: 6px;
+}
+
+.vertical-line {
+    display: inline-block;
+    border-left: 1px solid #ccc;
+    margin: 0 10px;
+    height: 50px;
+}
+
+.navbar-nav {
+    padding-left: 20px;
+}
+
+.nav-item {
+    font-weight: bold;
+}
+
+/** BODY **/
+body {
+    margin: 0;
+}
+
+.remove-all-margins {
+    margin: 0 !important;
+    max-width: 100% !important;
+}
+
+.bottom-border {
+    border-bottom: 3px solid darkslategray;
+}
+
+.right-border {
+    border-right: 3px solid darkslategray
+}
+
+#canvas-column {
+    padding: 0;
+}
+canvas {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+}
+
+.slider-set {
+    padding: 20px 0 0 0;
+}
+
+.button-set {
+    padding: 20px 0 20px 0;
+    text-align: center;
+}
+
+.button-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.range-label {
+    font-weight: bold;
+}
+
+/** FOOTER **/
+footer {
+    height: 100px;
+}
