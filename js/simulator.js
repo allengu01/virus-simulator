@@ -100,7 +100,7 @@ function reset() {
         var x = radius*Math.cos(angle);
         var y = radius*Math.sin(angle);
     
-        nodes[i] = new Node(x, y, i==0);
+        nodes[i] = new Node(x, y, i==number_of_nodes-1);
     }
     
     drawCanvas();
